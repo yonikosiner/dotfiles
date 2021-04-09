@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/yonikosiner/code/clients/lifeincovertrust-2.0/frontend/src/components'
+let g:netrw_dirhist_6='/Users/yonikosiner/code/clients/lifeincovertrust-2.0/frontend/src'
+let g:netrw_dirhist_5='/'
+let g:netrw_dirhist_4='/Users'
+let g:netrw_dirhist_3='/Users/yonikosiner'
+let g:netrw_dirhist_2='/Users/yonikosiner/code'
+let g:netrw_dirhist_1='/Users/yonikosiner/code/yonikosiner.com'
+let g:netrw_dirhist_0='/Users/yonikosiner/code/yonikosiner.com/src'
+let g:netrw_dirhist_9='/Users/yonikosiner/.config/nvim'
+let g:netrw_dirhist_8='/Users/yonikosiner/.config'
