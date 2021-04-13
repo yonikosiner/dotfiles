@@ -8,9 +8,9 @@ while [ "$#" -gt 0 ]; do
     case "$curr" in
     "-mc")
         tmux new -s mycookbook -d
-        tmux neww -t mycookbook: -n watch -d 'cd ~/code/mycookbook && npm run watch'
-        tmux neww -t mycookbook: -n server -d 'cd ~/code/mycookbook && npm run server'
-        tmux neww -t mycookbook: -n frontend -d 'cd ~/code/mycookbook/frontend && npm start'
+        tmux neww -t mycookbook: -n watch -d 'cd ~/work/mycookbook && npm run watch'
+        tmux neww -t mycookbook: -n server -d 'cd ~/work/mycookbook && npm run server'
+        tmux neww -t mycookbook: -n frontend -d 'cd ~/work/mycookbook/frontend && npm start'
         ;;
     "-yk")
         tmux new -t yonikosiner-com -d

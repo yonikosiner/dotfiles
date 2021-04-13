@@ -32,6 +32,8 @@ alias rm='rm -i'
 alias vim="nvim"
 
 alias work="bash ~/scripts/work.sh"
+alias school="bash ~/scripts/school.sh"
+
 alias mca="tmux a -t mycookbook"
 
 

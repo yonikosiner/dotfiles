@@ -5,8 +5,8 @@ nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim
 nnoremap <leader>vh :lua require('telescope.builtin').help_tags()<CR>
 
 "TODO: Search dotfiles
-"nnoremap <leader>vim :lua require('yoni.telescope').search_dotfiles()<CR>
-nnoremap <leader>im :lua require('yoni.telescope').background()<CR>
+nnoremap <leader>vrc :lua require('yoni.telescope').search_dotfiles()<CR>
+"nnoremap <leader>im :lua cequirec'yoni.telescope').background()<CR>
 
 
 nnoremap <leader>gb :Telescope git_branches<CR>
