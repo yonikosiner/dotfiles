@@ -16,7 +16,7 @@ precmd() {
 setopt prompt_subst
 
 # Config for the prompt. PS1 synonym.
-prompt='[%1/]${vcs_info_msg_0_}$ '
+prompt='[%2/]${vcs_info_msg_0_}$ '
 
 EDITOR=nvim
 VISUAL=nvim

@@ -5,6 +5,8 @@ call plug#begin('~/.vim/pluged')
 "vim in browser
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
+Plug 'ThePrimeagen/git-worktree.nvim'
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
