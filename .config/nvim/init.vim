@@ -13,6 +13,10 @@ Plug 'nvim-treesitter/playground'
 Plug 'ThePrimeagen/harpoon'
 "Plug 'mhinz/vim-rfc'
 
+"Debuging
+Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
+
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'tjdevries/nlua.nvim'
@@ -24,6 +28,7 @@ Plug 'scrooloose/nerdcommenter'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'gruvbox-community/gruvbox'
+Plug 'ayu-theme/ayu-vim'
 
 "fuzy finder"
 Plug 'nvim-lua/popup.nvim'
@@ -47,33 +52,6 @@ lua require("yoni")
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 let g:yoni_colorscheme = "gruvbox"
-fun! ColorMyPencils()
-    let g:gruvbox_contrast_dark = 'hard'
-    if exists('+termguicolors')
-        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    endif
-    let g:gruvbox_invert_selection='0'
-
-    set background=dark
-    if has('nvim')
-        call luaeval('vim.cmd("colorscheme " .. _A[1])', [g:yoni_colorscheme])
-    else
-        colorscheme gruvbox
-    endif
-
-    highlight ColorColumn ctermbg=0 guibg=grey
-    hi SignColumn guibg=none
-    hi CursorLineNR guibg=None
-    highlight Normal guibg=none
-    " highlight LineNr guifg=#ff8659
-    " highlight LineNr guifg=#aed75f
-    highlight LineNr guifg=#5acd3
-    highlight netrwDir guifg=#5eacd3
-    highlight qfFileName guifg=#aed75f
-    hi TelescopeBorder guifg=#5eacd
-endfun
-call ColorMyPencils()
 
 let mapleader = " "
 
@@ -96,12 +74,16 @@ let fc = g:firenvim_config['localSettings']
 let fc['https?://twitter.com'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://www.twitch.tv'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://www.instagram.com'] = {'takeover': 'never', 'priority': 1}
+let fc['https?://www.notion.so'] = {'takeover': 'never', 'priority': 1}
+let fc['https?://roamresearch.com'] = {'takeover': 'never', 'priority': 1}
 
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
+
+nnoremap <leader>vwm :call ColorMyPencils()<CR>
 
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
