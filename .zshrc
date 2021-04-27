@@ -36,7 +36,4 @@ alias evrc="vim /Users/yonikosiner/.config/nvim"
 alias work="bash ~/scripts/work.sh"
 alias school="bash ~/scripts/school.sh"
 
-alias mca="tmux a -t mycookbook"
-
-
 bindkey -v
