@@ -75,7 +75,10 @@ let fc['https?://twitter.com'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://www.twitch.tv'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://www.instagram.com'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://www.notion.so'] = {'takeover': 'never', 'priority': 1}
+<<<<<<< HEAD
+=======
 let fc['https?://roamresearch.com'] = {'takeover': 'never', 'priority': 1}
+>>>>>>> e2962904fd925c1d24a2833aef983957049b4776
 
 
 nnoremap <leader>h :wincmd h<CR>
