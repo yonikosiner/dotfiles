@@ -7,6 +7,12 @@ Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 Plug 'ThePrimeagen/git-worktree.nvim'
 
+Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+
+"If you want to display icons, then use one of these plugins:
+Plug 'kyazdani42/nvim-web-devicons' "lua
+Plug 'ryanoasis/vim-devicons' "vimscript
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
@@ -75,10 +81,9 @@ let fc['https?://twitter.com'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://www.twitch.tv'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://www.instagram.com'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://www.notion.so'] = {'takeover': 'never', 'priority': 1}
-<<<<<<< HEAD
-=======
 let fc['https?://roamresearch.com'] = {'takeover': 'never', 'priority': 1}
->>>>>>> e2962904fd925c1d24a2833aef983957049b4776
+let fc['https?://meet.google.com'] = {'takeover': 'never', 'priority': 1}
+
 
 
 nnoremap <leader>h :wincmd h<CR>
@@ -101,6 +106,8 @@ nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>rp :resize 100<CR>
 
+"nmap <tab>:tabnext<CR>
+"vmap <tab>:tabnext<CR>
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
