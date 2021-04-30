@@ -78,8 +78,11 @@ let fc['https?://www.twitch.tv'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://www.instagram.com'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://www.notion.so'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://roamresearch.com'] = {'takeover': 'never', 'priority': 1}
+<<<<<<< HEAD
+=======
 let fc['https?://meet.google.com'] = {'takeover': 'never', 'priority': 1}
 
+>>>>>>> 78f6b60e33e11cf84ddde83d138d2ba781a4fe8a
 
 
 nnoremap <leader>h :wincmd h<CR>
