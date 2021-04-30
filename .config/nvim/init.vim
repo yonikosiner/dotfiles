@@ -19,10 +19,6 @@ Plug 'nvim-treesitter/playground'
 Plug 'ThePrimeagen/harpoon'
 "Plug 'mhinz/vim-rfc'
 
-"Debuging
-Plug 'puremourning/vimspector'
-Plug 'szw/vim-maximizer'
-
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'tjdevries/nlua.nvim'
