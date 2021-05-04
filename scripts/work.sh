@@ -9,7 +9,6 @@ while [ "$#" -gt 0 ]; do
         tmux new -s mycookbook -d
         tmux neww -t mycookbook: -n watch -d 'cd ~/work/mycookbook.git/master && npm run watch'
         tmux neww -t mycookbook: -n server -d 'cd ~/work/mycookbook.git/master && npm run server'
-        #tmux neww -t mycookbook: -n frontend -d 'cd ~/work/mycookbook/frontend && npm start'
         ;;
     *) echo "Unavailable command... $curr"
     esac
