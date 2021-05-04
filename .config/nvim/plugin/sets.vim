@@ -20,11 +20,11 @@ set incsearch
 set nohlsearch
 set signcolumn=yes
 set termguicolors
+set spell spelllang=en_us
 
 set colorcolumn=80
-"highlight ColorColumn ctermbg=0 guibg=lightgrey
 set scrolloff=8
-" set noshowmode
+" set no show mode
 set signcolumn=yes
 set isfname+=@-@
 " set ls=0
@@ -32,7 +32,7 @@ set isfname+=@-@
 " Give more space for displaying messages.
 set cmdheight=1
 
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" Having longer update time (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=50
 
