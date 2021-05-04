@@ -17,7 +17,7 @@ nnoremap <leader>vsd :lua vim.lsp.util.show_line_diagnostics(); vim.lsp.util.sho
 "nnoreap <leader>vn :lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <leader>vll :call LspLocationList()<CR>
 
-augroup THE_PRIMEAGEN_LSP
+augroup YONI_LSP
     autocmd!
     autocmd! BufWrite,BufEnter,InsertLeave * :call LspLocationList()
 augroup ENDm

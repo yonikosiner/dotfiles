@@ -11,6 +11,8 @@ precmd() {
     vcs_info
 }
 
+bindkey -s ^l "scripts/tmux2.sh\n"
+
 
 # Enable substitution in the prompt.
 setopt prompt_subst
