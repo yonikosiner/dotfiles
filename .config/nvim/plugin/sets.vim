@@ -20,7 +20,6 @@ set incsearch
 set nohlsearch
 set signcolumn=yes
 set termguicolors
-set spell spelllang=en_us
 
 set colorcolumn=80
 set scrolloff=8
@@ -41,5 +40,4 @@ set shortmess+=c
 
 set colorcolumn=80
 
-"colorscheme gruvbox
-hi Normal guibg=NONE ctermbg=NONE
+call ColorMyPencils()

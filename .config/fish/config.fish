@@ -5,7 +5,7 @@ set -U fish_user_paths /opt/local/bin
 set fish_greeting
 
 alias c='clear'
-alias vim="nvim"
+alias vim="/Users/yonikosiner/nvim-osx64/bin/nvim"
 
 alias ..="cd .."
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'

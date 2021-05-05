@@ -1,17 +1,23 @@
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
+source $HOME/.config/nvim/themes/airline.vim
 
 call plug#begin('~/.vim/pluged')
 "vim in browser
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 Plug 'ThePrimeagen/git-worktree.nvim'
 
-Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 "If you want to display icons, then use one of these plugins:
 Plug 'kyazdani42/nvim-web-devicons' "lua
-Plug 'ryanoasis/vim-devicons' "vimscript
+Plug 'ryanoasis/vim-devicons'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
@@ -26,10 +32,8 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'tjdevries/nlua.nvim'
 Plug 'tjdevries/lsp_extensions.nvim'
 
-Plug 'vbe0201/vimdiscord'
 Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdcommenter'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'gruvbox-community/gruvbox'
 Plug 'ayu-theme/ayu-vim'
@@ -40,22 +44,36 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
-
 "Plug 'prettier/vim-prettier', {
-            \ 'do': 'npm install',
-            \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'python'] }
+            "\ 'do': 'npm install',
+            "\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'python'] }
 Plug 'mhinz/vim-rfc'
 Plug 'mbbill/undotree'
-
-"Plug 'voldikss/vim-floaterm'
 call plug#end()
-
-lua require("yoni")
 
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
-let g:yoni_colorscheme = "gruvbox"
+fun! ColorMyPencils()
+    let g:gruvbox_contrast_dark = 'hard'
+    if exists('+termguicolors')
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    endif
+    let g:gruvbox_invert_selection='0'
+
+    set background=dark
+    colorscheme gruvbox
+
+    highlight ColorColumn ctermbg=0 guibg=grey
+    hi SignColumn guibg=none
+    hi CursorLineNR guibg=None
+    highlight Normal guibg=none
+    highlight LineNr guifg=#5acd3
+    highlight netrwDir guifg=#5eacd3
+    highlight qfFileName guifg=#aed75f
+    hi TelescopeBorder guifg=#5eacd
+endfun
+call ColorMyPencils()
 
 let mapleader = " "
 
@@ -82,6 +100,9 @@ let fc['https?://www.notion.so'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://roamresearch.com'] = {'takeover': 'never', 'priority': 1}
 let fc['https?://meet.google.com'] = {'takeover': 'never', 'priority': 1}
 
+let g:NERDTreeIgnore = ['^node_modules$']
+
+let g:airline_powerline_fonts = 1
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -94,10 +115,10 @@ vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
 
-nnoremap <leader>fl :Ex<CR>
+nnoremap <leader>fl :NERDTree<CR>
 
 nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <leader>pv :Sex! <CR>
+nnoremap <leader>pv :NERDTreeToggle<CR>
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
