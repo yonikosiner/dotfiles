@@ -122,6 +122,10 @@ nnoremap <leader>pv :NERDTreeToggle<CR>
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
+
+nnoremap <Leader>t+ :top resize +5<CR>
+nnoremap <Leader>t- :top resize -5<CR>
+
 nnoremap <Leader>rp :resize 100<CR>
 
 "nmap <tab>:tabnext<CR>
