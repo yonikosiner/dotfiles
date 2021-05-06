@@ -109,6 +109,14 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+"For when reading docs turn of numbers
+fun! ReadingDocs()
+    :set norelativenumber
+    :set nonumber
+endfun
+
+nnoremap <leader>rrd :call ReadingDocs()<CR>
+
 nnoremap <leader>vwm :call ColorMyPencils()<CR>
 
 vmap ++ <plug>NERDCommenterToggle
