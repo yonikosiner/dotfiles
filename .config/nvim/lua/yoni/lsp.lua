@@ -1,21 +1,17 @@
 local on_attach = require'completion'.on_attach
---TODO: Get python complete working
---require'lspconfig'.jedi_language_server.setup{
-    --cmd = { "jedi-language-server" }
-    --filetypes = { "python" }
---}
 
---TODO: Get css complete working
+--require'lspconfig'.python-language-server.setup{ on_attach=on_attach  }
+
 --require'lspconfig'.cssls.setup{}
 
 require'lspconfig'.tsserver.setup{ on_attach=on_attach }
 
-require'lspconfig'.clangd.setup {
-    on_attach = on_attach,
-    root_dir = function() return vim.loop.cwd() end
-}
+--require'lspconfig'.clangd.setup {
+    --on_attach = on_attach,
+    --root_dir = function() return vim.loop.cwd() end
+--}
+--require'lspconfig'.pyls.setup{ on_attach=on_attach }
 
-require'lspconfig'.pyls.setup{ on_attach=on_attach }
 --require'lspconfig'.gopls.setup{ on_attach=on_attach }
 --require'lspconfig'.rust_analyzer.setup{ on_attach=on_attach }
 

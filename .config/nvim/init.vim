@@ -51,6 +51,8 @@ Plug 'mhinz/vim-rfc'
 Plug 'mbbill/undotree'
 call plug#end()
 
+lua require("yoni")
+
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 fun! ColorMyPencils()
