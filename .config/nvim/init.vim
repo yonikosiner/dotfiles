@@ -133,6 +133,10 @@ nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
+nnoremap <C-i> :cnext<CR>zz
+nnoremap <C-l> :cprev<CR>zz
+nnoremap <leader>p :copen<CR>
+
 nnoremap <Leader>t+ :top resize +5<CR>
 nnoremap <Leader>t- :top resize -5<CR>
 
