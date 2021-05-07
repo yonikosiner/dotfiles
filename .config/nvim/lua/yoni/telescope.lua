@@ -42,5 +42,11 @@ M.search_scripts = function()
     })
 end
 
-return M
+M.blog = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< Scripts >",
+        cwd = "/Users/yonikosiner/personal/yonikosiner.com/frontend/src/posts",
+    })
+end
 
+return M

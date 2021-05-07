@@ -6,6 +6,7 @@ nnoremap <leader>pb :lua require('telescope.builtin').buffers()<CR>
 
 nnoremap <leader>vrc :lua require('yoni.telescope').search_dotfiles()<CR>
 nnoremap <leader>pss :lua require('yoni.telescope').search_scripts()<CR>
+nnoremap <leader>bb :lua require('yoni.telescope').blog()<CR>
 
 
 nnoremap <leader>gb :Telescope git_branches<CR>
