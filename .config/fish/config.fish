@@ -14,3 +14,5 @@ alias evrc="vim /Users/yonikosiner/.config/nvim"
 
 alias work="bash ~/scripts/work.sh"
 alias school="bash ~/scripts/school.sh"
+
+set theme_color_scheme gruvbox
