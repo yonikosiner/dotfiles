@@ -62,7 +62,7 @@ fun! ColorMyPencils()
     let g:gruvbox_invert_selection='0'
 
     set background=dark
-    colorscheme gruvbox
+    colorscheme ayu
 
     highlight ColorColumn ctermbg=0 guibg=grey
     hi SignColumn guibg=none
