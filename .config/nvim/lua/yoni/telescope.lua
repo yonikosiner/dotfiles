@@ -56,4 +56,9 @@ M.blog = function()
         cwd = "/Users/yonikosiner/personal/yonikosiner.com/frontend/src/posts",
     })
 end
+
+M.grep = function()
+    require("telescope.builtin").live_grep()
+end
+
 return M
