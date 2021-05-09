@@ -15,15 +15,14 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-"If you want to display icons, then use one of these plugins:
-Plug 'kyazdani42/nvim-web-devicons' "lua
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
 Plug 'ThePrimeagen/harpoon'
-"Plug 'mhinz/vim-rfc'
+Plug 'mhinz/vim-rfc'
 
 Plug 'tpope/vim-fugitive'
 
@@ -34,7 +33,6 @@ Plug 'tjdevries/lsp_extensions.nvim'
 
 Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdcommenter'
-
 Plug 'gruvbox-community/gruvbox'
 Plug 'ayu-theme/ayu-vim'
 
@@ -121,8 +119,8 @@ nnoremap <leader>rrd :call ReadingDocs()<CR>
 
 nnoremap <leader>vwm :call ColorMyPencils()<CR>
 
-vmap ++ <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggle
+vmap <C-a> <plug>NERDCommenterToggle
+nmap <C-a> <plug>NERDCommenterToggle
 
 
 nnoremap <leader>fl :NERDTree<CR>

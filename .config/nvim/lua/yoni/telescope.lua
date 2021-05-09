@@ -26,6 +26,7 @@ require('telescope').setup {
 }
 
 require('telescope').load_extension('fzy_native')
+file_ignoe_patterns = {"dist"}
 
 local M = {}
 M.search_dotfiles = function()
@@ -35,5 +36,24 @@ M.search_dotfiles = function()
     })
 end
 
-return M
+M.search_scripts = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< Scripts >",
+        cwd = "/Users/yonikosiner/scripts/",
+    })
+end
 
+M.fish= function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< Fish >",
+        cwd = "/Users/yonikosiner/.config/fish",
+    })
+end
+
+M.blog = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< Blog Posts >",
+        cwd = "/Users/yonikosiner/personal/yonikosiner.com/frontend/src/posts",
+    })
+end
+return M

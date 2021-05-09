@@ -1,30 +1,32 @@
-:set number
-syntax on
-
-set guicursor=
-set relativenumber
-set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set scrolloff=8
-set expandtab
-set smartindent
-set nu
-set nowrap
-set smartcase
-set noswapfile
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
-set incsearch
-set nohlsearch
-set signcolumn=yes
 set termguicolors
 
-set colorcolumn=80
+set nu
+set relativenumber
+
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+
+set undofile
+set undodir=~/.vim/undodir
+
+set exrc
+"set guicursor=
+set guicursor=i:ver50-iCursor
+set noerrorbells
+
+set incsearch
+set nohlsearch
+
+set noswapfile
+set nobackup
+
 set scrolloff=8
+set nowrap
+
+set colorcolumn=80
 " set no show mode
-set signcolumn=yes
 set isfname+=@-@
 " set ls=0
 
@@ -38,6 +40,6 @@ set updatetime=50
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-set colorcolumn=80
+set signcolumn=yes
 
 call ColorMyPencils()

@@ -28,6 +28,8 @@ alias ll="ls -l"
 alias ..="cd .."
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
+alias :q="exit"
+
 alias mv='mv -i'
 alias rm='rm -i'
 
