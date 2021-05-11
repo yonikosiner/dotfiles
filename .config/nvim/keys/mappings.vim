@@ -1,6 +1,5 @@
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
-" <TAB>: completion.
 
 " Better tabbing
 vnoremap < <gv
