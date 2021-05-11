@@ -135,7 +135,7 @@ nnoremap <C-i> :cnext<CR>zz
 nnoremap <C-l> :cprev<CR>zz
 nnoremap <leader>p :copen<CR>
 
-nnoremap <Leader>t+ :top resize +5<CR>
+noremap <Leader>t+ :top resize +5<CR>
 nnoremap <Leader>t- :top resize -5<CR>
 
 "Coppy selcetd line to clipboard on mac os
@@ -155,5 +155,5 @@ vnoremap K :m '<-2<CR>gv=gv
 augroup YONI
     autocmd!
     autocmd BufWritePre * %s/\s\+$//e
-    autocmd BufEnter,BufWinEnter,TabEnter *.rs :lua require'lsp_extensions'.inlay_hints{}
+   autocmd BufEnter,BufWinEnter,TabEnter *.rs :lua require'lsp_extensions'.inlay_hints{}
 augroup END
