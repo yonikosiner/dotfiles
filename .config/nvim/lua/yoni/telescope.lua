@@ -59,7 +59,9 @@ M.blog = function()
 end
 
 M.grep = function()
-    require("telescope.builtin").live_grep()
+    require("telescope.builtin").live_grep({
+        prompt_title = "< Grep >"
+    })
 end
 
 return M

@@ -18,8 +18,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'nvim-treesitter/playground'
 
 Plug 'ThePrimeagen/harpoon'
 Plug 'mhinz/vim-rfc'
@@ -51,7 +51,7 @@ call plug#end()
 
 lua require("yoni")
 
-lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+"lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 fun! ColorMyPencils()
     let g:gruvbox_contrast_dark = 'hard'
@@ -62,7 +62,7 @@ fun! ColorMyPencils()
     let g:gruvbox_invert_selection='0'
 
     set background=dark
-    colorscheme ayu
+    colorscheme gruvbox
 
     highlight ColorColumn ctermbg=0 guibg=grey
     hi SignColumn guibg=none
