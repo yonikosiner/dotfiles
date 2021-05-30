@@ -12,6 +12,7 @@ precmd() {
 }
 
 bindkey -s ^l "scripts/tmux2.sh\n"
+alias clangd="/Users/yonikosiner/Downloads/clang+llvm-12.0.0-aarch64-linux-gnu/bin/clangd"
 
 
 # Enable substitution in the prompt.

@@ -11,15 +11,16 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'ThePrimeagen/git-worktree.nvim'
 
-Plug 'preservim/nerdtree'
+Plug 'HerringtonDarkholme/yats.vim'
+
+"Plug 'airblade/vim-gitgutter'
+
+"Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
-
-"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-"Plug 'nvim-treesitter/playground'
 
 Plug 'ThePrimeagen/harpoon'
 Plug 'mhinz/vim-rfc'
@@ -62,7 +63,7 @@ fun! ColorMyPencils()
     let g:gruvbox_invert_selection='0'
 
     set background=dark
-    colorscheme gruvbox
+    colorscheme ayu
 
     highlight ColorColumn ctermbg=0 guibg=grey
     hi SignColumn guibg=none
@@ -122,12 +123,12 @@ nnoremap <leader>vwm :call ColorMyPencils()<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
+nnoremap <leader>fl :Ex<CR>
 
-nnoremap <leader>fl :NERDTree<CR>
-
-nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <leader>pv :NERDTreeToggle<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <leader>pv :Sex!<CR>
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
+
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
