@@ -13,9 +13,9 @@ Plug 'ThePrimeagen/git-worktree.nvim'
 
 Plug 'HerringtonDarkholme/yats.vim'
 
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 
-Plug 'preservim/nerdtree'
+"Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
@@ -68,7 +68,7 @@ fun! ColorMyPencils()
     let g:gruvbox_invert_selection='0'
 
     set background=dark
-    colorscheme gruvbox
+    colorscheme ayu
 
     highlight ColorColumn ctermbg=0 guibg=grey
     hi SignColumn guibg=none
@@ -131,10 +131,10 @@ vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
 
-nnoremap <leader>fl :NERDTree<CR>
+nnoremap <leader>fl :Ex<CR>
 
-nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <leader>pv :NERDTreeToggle<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <leader>pv :Sex!<CR>
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
