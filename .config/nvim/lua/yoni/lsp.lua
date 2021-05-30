@@ -6,6 +6,7 @@ local on_attach = require'completion'.on_attach
 
 require'lspconfig'.tsserver.setup{ on_attach=on_attach }
 
+<<<<<<< HEAD
 require'lspconfig'.pyright.setup{ on_attach=on_attach }
 
 require'lspconfig'.bashls.setup{ on_attach=on_attach }
@@ -15,6 +16,8 @@ require'lspconfig'.clangd.setup {
     root_dir = function() return vim.loop.cwd() end
 }
 
+=======
+>>>>>>> cb38437196fe4a5baf6c4174368123f1673f6585
 --require'lspconfig'.clangd.setup {
     --on_attach = on_attach,
     --root_dir = function() return vim.loop.cwd() end

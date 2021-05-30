@@ -11,19 +11,26 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'ThePrimeagen/git-worktree.nvim'
 
+<<<<<<< HEAD
 Plug 'HerringtonDarkholme/yats.vim'
 
 "Plug 'airblade/vim-gitgutter'
 
 "Plug 'preservim/nerdtree'
+=======
+Plug 'preservim/nerdtree'
+>>>>>>> cb38437196fe4a5baf6c4174368123f1673f6585
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 
+<<<<<<< HEAD
 Plug 'vifm/vifm.vim'
 
+=======
+>>>>>>> cb38437196fe4a5baf6c4174368123f1673f6585
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Plug 'nvim-treesitter/playground'
 
@@ -68,7 +75,11 @@ fun! ColorMyPencils()
     let g:gruvbox_invert_selection='0'
 
     set background=dark
+<<<<<<< HEAD
     colorscheme ayu
+=======
+    colorscheme gruvbox
+>>>>>>> cb38437196fe4a5baf6c4174368123f1673f6585
 
     highlight ColorColumn ctermbg=0 guibg=grey
     hi SignColumn guibg=none
@@ -83,8 +94,11 @@ call ColorMyPencils()
 
 let mapleader = " "
 
+<<<<<<< HEAD
 let g:yats_host_keyword = 1
 
+=======
+>>>>>>> cb38437196fe4a5baf6c4174368123f1673f6585
 let g:firenvim_config = {
             \ 'globalSettings': {
             \ 'alt': 'all',
@@ -127,6 +141,7 @@ nnoremap <leader>rrd :call ReadingDocs()<CR>
 
 nnoremap <leader>vwm :call ColorMyPencils()<CR>
 
+<<<<<<< HEAD
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
@@ -135,6 +150,16 @@ nnoremap <leader>fl :Ex<CR>
 
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>pv :Sex!<CR>
+=======
+vmap <C-a> <plug>NERDCommenterToggle
+nmap <C-a> <plug>NERDCommenterToggle
+
+
+nnoremap <leader>fl :NERDTree<CR>
+
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>pv :NERDTreeToggle<CR>
+>>>>>>> cb38437196fe4a5baf6c4174368123f1673f6585
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
