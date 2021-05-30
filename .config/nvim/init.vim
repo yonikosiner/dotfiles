@@ -119,8 +119,8 @@ nnoremap <leader>rrd :call ReadingDocs()<CR>
 
 nnoremap <leader>vwm :call ColorMyPencils()<CR>
 
-vmap <C-a> <plug>NERDCommenterToggle
-nmap <C-a> <plug>NERDCommenterToggle
+vmap ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggle
 
 
 nnoremap <leader>fl :NERDTree<CR>
