@@ -12,10 +12,7 @@ precmd() {
 }
 
 bindkey -s ^l "scripts/tmux2.sh\n"
-<<<<<<< HEAD
 alias clangd="/Users/yonikosiner/Downloads/clang+llvm-12.0.0-aarch64-linux-gnu/bin/clangd"
-=======
->>>>>>> cb38437196fe4a5baf6c4174368123f1673f6585
 
 
 # Enable substitution in the prompt.
