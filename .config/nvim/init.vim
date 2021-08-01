@@ -1,32 +1,25 @@
-source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/themes/airline.vim
 
 call plug#begin('~/.vim/pluged')
 "vim in browser
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
+"Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'ThePrimeagen/git-worktree.nvim'
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'nvim-treesitter/playground'
 
-Plug 'HerringtonDarkholme/yats.vim'
-
-"Plug 'airblade/vim-gitgutter'
-
-"Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
+"Icons
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 
-Plug 'ThePrimeagen/harpoon'
-Plug 'mhinz/vim-rfc'
-
+"Git
 Plug 'tpope/vim-fugitive'
+Plug 'ThePrimeagen/git-worktree.nvim'
 
+"Lsp pulgins
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'tjdevries/nlua.nvim'
@@ -34,6 +27,8 @@ Plug 'tjdevries/lsp_extensions.nvim'
 
 Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdcommenter'
+
+"Themes
 Plug 'gruvbox-community/gruvbox'
 Plug 'ayu-theme/ayu-vim'
 
@@ -43,67 +38,16 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-"Plug 'prettier/vim-prettier', {
-            "\ 'do': 'npm install',
-            "\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'python'] }
 Plug 'mhinz/vim-rfc'
 Plug 'mbbill/undotree'
+Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 lua require("yoni")
 
 "lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
-fun! ColorMyPencils()
-    let g:gruvbox_contrast_dark = 'hard'
-    if exists('+termguicolors')
-        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    endif
-    let g:gruvbox_invert_selection='0'
-
-    set background=dark
-    colorscheme ayu
-
-    highlight ColorColumn ctermbg=0 guibg=grey
-    hi SignColumn guibg=none
-    hi CursorLineNR guibg=None
-    highlight Normal guibg=none
-    highlight LineNr guifg=#5acd3
-    highlight netrwDir guifg=#5eacd3
-    highlight qfFileName guifg=#aed75f
-    hi TelescopeBorder guifg=#5eacd
-endfun
-call ColorMyPencils()
-
 let mapleader = " "
-
-let g:firenvim_config = {
-            \ 'globalSettings': {
-            \ 'alt': 'all',
-            \  },
-            \ 'localSettings': {
-            \ '.*': {
-            \ 'cmdline': 'neovim',
-            \ 'content': 'text',
-            \ 'priority': 0,
-            \ 'selector': 'textarea',
-            \ 'takeover': 'always',
-            \ },
-            \ }
-            \ }
-
-let fc = g:firenvim_config['localSettings']
-let fc['https?://twitter.com'] = {'takeover': 'never', 'priority': 1}
-let fc['https?://www.twitch.tv'] = {'takeover': 'never', 'priority': 1}
-let fc['https?://www.instagram.com'] = {'takeover': 'never', 'priority': 1}
-let fc['https?://www.notion.so'] = {'takeover': 'never', 'priority': 1}
-let fc['https?://roamresearch.com'] = {'takeover': 'never', 'priority': 1}
-let fc['https?://meet.google.com'] = {'takeover': 'never', 'priority': 1}
-
-let g:NERDTreeIgnore = ['^node_modules$']
-
-let g:airline_powerline_fonts = 1
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -152,6 +96,31 @@ nnoremap <Leader>rp :resize 100<CR>
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+"Greatest remap ever
+vnoremap <leader>p "_dP
+
+"Next greatest remap ever : asbjornHaland
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y gg"+yG
+
+vnoremap <leader>d "_d
+nnoremap <leader>d "_d
+
+
+"Stop annoying visual mode
+nnoremap <silent>Q <Nop>
+
+" Use control-c instead of escape
+nnoremap <C-c> <Esc>
+
+" Better tabbing
+vnoremap < <gv
+vnoremap > >gv
+
+noremap <Leader>o o<Esc>^Da
+nnoremap <Leader>O O<Esc>^Da
 
 augroup YONI
     autocmd!
