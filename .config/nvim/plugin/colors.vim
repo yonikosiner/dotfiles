@@ -1,4 +1,4 @@
-let g:yoni_colorscheme = "gruvbox"
+let g:yoni_colorscheme = "ayu"
 
 fun! ColorMyPencils()
     let g:gruvbox_contrast_dark = 'hard'

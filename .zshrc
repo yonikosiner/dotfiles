@@ -1,6 +1,8 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:/opt/local/bin
 export PATH=$PATH:/Users/yonikosiner/nvim-osx64/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Enabling and setting git info var to be used in prompt config.
 autoload -Uz vcs_info
@@ -11,7 +13,7 @@ precmd() {
     vcs_info
 }
 
-bindkey -s ^l "scripts/tmux2.sh\n"
+bindkey -s ^f "scripts/tmux2.sh\n"
 alias clangd="/Users/yonikosiner/Downloads/clang+llvm-12.0.0-aarch64-linux-gnu/bin/clangd"
 
 

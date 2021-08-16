@@ -108,12 +108,22 @@ nnoremap <leader>Y gg"+yG
 vnoremap <leader>d "_d
 nnoremap <leader>d "_d
 
+nnoremap Y y$
+nnoremap n nzzzv
+nnoremap N nzzzv
+nnoremap J mzJ`z
+nnoremap <C-j> :cnext<CR>zzzv
 
 "Stop annoying visual mode
 nnoremap <silent>Q <Nop>
 
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
+
+inoremap , , <c-g>u
+inoremap . . <c-g>u
+inoremap ! ! <c-g>u
+inoremap ? ? <c-g>u
 
 " Better tabbing
 vnoremap < <gv
