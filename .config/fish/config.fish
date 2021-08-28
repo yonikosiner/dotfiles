@@ -18,7 +18,11 @@ alias :q="exit"
 alias evrc="vim /Users/yonikosiner/.config/nvim"
 alias ef="vim /Users/yonikosiner/.config/fish"
 
-alias work="bash ~/scripts/work.sh"
-alias school="bash ~/scripts/school.sh"
+alias safariTabs="osascript ~/safariTabs"
+
+alias work="~/scripts/work.sh"
+alias school="~/scripts/school.sh"
+
+alias bg="~/scripts/bg"
 
 set theme_color_scheme gruvbox

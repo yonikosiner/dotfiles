@@ -13,8 +13,12 @@ precmd() {
     vcs_info
 }
 
-bindkey -s ^f "scripts/tmux2.sh\n"
+bindkey -s ^f "~/scripts/bg -a\n"
+bindkey -s ^u "~/scripts/bg -v\n"
+
 alias clangd="/Users/yonikosiner/Downloads/clang+llvm-12.0.0-aarch64-linux-gnu/bin/clangd"
+
+alias urlS="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -dump URLSchemeBinding"
 
 
 # Enable substitution in the prompt.
@@ -30,6 +34,8 @@ alias c="clear"
 alias ll="ls -l"
 alias ..="cd .."
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+alias bg="~/scripts/bg"
 
 alias :q="exit"
 

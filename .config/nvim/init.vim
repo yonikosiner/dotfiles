@@ -47,6 +47,11 @@ lua require("yoni")
 
 let mapleader = " "
 
+"lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
+
+nnoremap <silent> <C-f> :lua require("harpoon.term").sendCommand(1, "~/scripts/bg -a\n"); require("harpoon.term").gotoTerminal(1)<CR>
+nnoremap <silent> <C-q> :lua require("harpoon.term").sendCommand(1, "~/scripts/bg -v\n"); require("harpoon.term").gotoTerminal(1)<CR>
+
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -60,23 +65,18 @@ endfun
 
 nnoremap <leader>rrd :call ReadingDocs()<CR>
 
-nnoremap <leader>vwm :call ColorMyPencils()<CR>
-
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
 nnoremap <leader>fl :Ex<CR>
 
 nnoremap <leader>u :UndotreeToggle<CR>
-nnoremap <leader>pv :Sex!<CR>
+nnoremap <leader>pv :Ex<CR>
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
-nnoremap <C-i> :cnext<CR>zz
-nnoremap <C-l> :cprev<CR>zz
-nnoremap <leader>p :copen<CR>
 
 noremap <Leader>t+ :top resize +5<CR>
 nnoremap <Leader>t- :top resize -5<CR>
@@ -86,11 +86,6 @@ vmap <leader>vc :w !pbcopy<CR>
 
 "Coppy file on mac os
 nnoremap <leader>pc :%w !pbcopy<CR>
-
-nnoremap <Leader>rp :resize 100<CR>
-
-"nmap <tab>:tabnext<CR>
-"vmap <tab>:tabnext<CR>
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -104,24 +99,22 @@ vnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
 
 vnoremap <leader>d "_d
-nnoremap <leader>d "_d
+noremap <leader>d "_d
 
-nnoremap Y y$
+cnoremap Y y$
 nnoremap n nzzzv
 nnoremap N nzzzv
 nnoremap J mzJ`z
-nnoremap <C-j> :cnext<CR>zzzv
+
+nnoremap <C-i> :cnext
+nnoremap <C-l> :cnext
+nnoremap <leader>po :copen<CR>
 
 "Stop annoying visual mode
 nnoremap <silent>Q <Nop>
 
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
-
-inoremap , , <c-g>u
-inoremap . . <c-g>u
-inoremap ! ! <c-g>u
-inoremap ? ? <c-g>u
 
 " Better tabbing
 vnoremap < <gv
