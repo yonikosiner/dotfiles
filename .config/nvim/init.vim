@@ -101,14 +101,22 @@ nnoremap <leader>Y gg"+yG
 vnoremap <leader>d "_d
 noremap <leader>d "_d
 
-cnoremap Y y$
+nnoremap Y y$
 nnoremap n nzzzv
 nnoremap N nzzzv
 nnoremap J mzJ`z
 
-nnoremap <C-i> :cnext
-nnoremap <C-l> :cnext
+nnoremap * *zzzv
+nnoremap # #zzzv
+nnoremap , ,zzzv
+nnoremap ; ;zzzv
+
+nnoremap <C-i> :cnext<CR>
+nnoremap <C-l> :cprev<CR>
+nnoremap <C-v> :lnext<CR>
+nnoremap <C-z> :lprevious<CR>
 nnoremap <leader>po :copen<CR>
+nnoremap <leader>lo :lopen<CR>
 
 "Stop annoying visual mode
 nnoremap <silent>Q <Nop>
