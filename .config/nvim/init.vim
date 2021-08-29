@@ -1,12 +1,10 @@
-source $HOME/.config/nvim/themes/airline.vim
-
 call plug#begin('~/.vim/pluged')
 "vim in browser
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 "Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Plug 'nvim-treesitter/playground'
@@ -111,7 +109,7 @@ nnoremap # #zzzv
 nnoremap , ,zzzv
 nnoremap ; ;zzzv
 
-nnoremap <C-i> :cnext<CR>
+nnoremap <C-\> :cnext<CR>
 nnoremap <C-l> :cprev<CR>
 nnoremap <C-v> :lnext<CR>
 nnoremap <C-z> :lprevious<CR>
