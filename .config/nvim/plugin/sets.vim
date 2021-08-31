@@ -12,8 +12,8 @@ set undofile
 set undodir=~/.vim/undodir
 
 set exrc
-"set guicursor=
-set guicursor=i:ver50-iCursor
+set guicursor=
+"set guicursor=i:ver50-iCursor
 set noerrorbells
 
 set incsearch

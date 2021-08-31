@@ -5,10 +5,10 @@ nnoremap <C-p> <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>pb :lua require('telescope.builtin').buffers()<CR>
 
 nnoremap <leader>vrc :lua require('yoni.telescope').search_dotfiles()<CR>
-nnoremap <leader>pss :lua require('yoni.telescope').search_scripts()<CR>
-nnoremap <leader>bb :lua require('yoni.telescope').blog()<CR>
-nnoremap <leader>ef :lua require('yoni.telescope').fish()<CR>
+nnoremap <leader>pls :lua require('yoni.telescope').search_scripts()<CR>
 nnoremap <leader>ps :lua require('yoni.telescope').grep()<CR>
+
+"nnoremap <leader>va :lua require('yoni.telescope').anime_selector()<CR>
 
 
 nnoremap <leader>gb :Telescope git_branches<CR>
