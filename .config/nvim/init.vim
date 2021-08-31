@@ -120,10 +120,10 @@ nnoremap <silent>Q <Nop>
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
 
-inoremap , , <c-g>u
-inoremap . . <c-g>u
-inoremap ! ! <c-g>u
-inoremap ? ? <c-g>u
+"inoremap , , <c-g>u
+"inoremap . . <c-g>u
+"inoremap ! ! <c-g>u
+"inoremap ? ? <c-g>u
 
 " Better tabbing
 vnoremap < <gv
