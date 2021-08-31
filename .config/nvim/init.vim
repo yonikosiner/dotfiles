@@ -2,10 +2,6 @@ call plug#begin('~/.vim/pluged')
 "vim in browser
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
-"Airline
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Plug 'nvim-treesitter/playground'
 
@@ -42,6 +38,8 @@ Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 lua require("yoni")
+
+"lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 let mapleader = " "
 

@@ -22,6 +22,10 @@ alias urlS="/System/Library/Frameworks/CoreServices.framework/Versions/A/Framewo
 
 alias iCloud="cd /Users/yonikosiner/Library/Mobile\ Documents/com~apple~CloudDocs"
 
+<<<<<<< HEAD
+=======
+alias obsidian="cd /Users/yonikosiner/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Main\ obsidian\ vault"
+>>>>>>> 8410127dd0dcc248d50af459b3dd7c23771acde5
 
 # Enable substitution in the prompt.
 setopt prompt_subst
